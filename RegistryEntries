@@ -1,0 +1,10 @@
+reg add HKLM\SYSTEM\CurrentControlSet\services\               -This registry holds services
+
+reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run    -This registry holds auto run executables
+
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated  -This registry holds AlwaysInstallElevated keys
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated  -This registry holds AlwaysInstallElevated keys ---msiexec /quiet /qn /i C:\<reverse.msi>
+
+reg query HKLM /f password /t REG_SZ /s   -This reg can be searched for keys and vales that contain the word password
+
+reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion\winlogon"  -This key will help in finding admin AutoLogon Credentials
